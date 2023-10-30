@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commanderscall.ui", "commanderscall.ui\commanderscall.ui.csproj", "{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://camdllc.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = commanderscall.ui\\commanderscall.ui.csproj
+		SccProjectName1 = commanderscall.ui
+		SccLocalPath1 = commanderscall.ui
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Debug|ARM.Build.0 = Debug|ARM
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Debug|ARM.Deploy.0 = Debug|ARM
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Debug|x86.ActiveCfg = Debug|x86
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Debug|x86.Build.0 = Debug|x86
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Debug|x86.Deploy.0 = Debug|x86
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Release|ARM.ActiveCfg = Release|ARM
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Release|ARM.Build.0 = Release|ARM
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Release|ARM.Deploy.0 = Release|ARM
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Release|x86.ActiveCfg = Release|x86
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Release|x86.Build.0 = Release|x86
+		{E3C9D3B8-848F-479B-9DA0-18BADEA74FDC}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

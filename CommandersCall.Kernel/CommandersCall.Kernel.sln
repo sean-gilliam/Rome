@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Kernel", "CommandersCall.Kernel\CommandersCall.Kernel.csproj", "{5B7A277E-0827-40B5-A825-86BCF63AD7F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Kernel.Runner", "CommandersCall.Kernel.Runner\CommandersCall.Kernel.Runner.csproj", "{2364D7AD-BF4E-40CC-ABD0-DAB0E5B7D000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Kernel.Control", "CommandersCall.Kernel.Control\CommandersCall.Kernel.Control.csproj", "{BED970B0-E59F-4B0A-AE9F-B21C0E79F202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Kernel.Service", "CommandersCall.Kernel.Service\CommandersCall.Kernel.Service.csproj", "{95B8E4B1-F510-45B3-A5C3-7AA5EBF54D33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E0861F4D-C12E-40A9-BB21-BDCB24A5A815}"
+	ProjectSection(SolutionItems) = preProject
+		..\.nuget\NuGet.config = ..\.nuget\NuGet.config
+		..\.nuget\NuGet.exe = ..\.nuget\NuGet.exe
+		..\.nuget\NuGet.targets = ..\.nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://camdllc.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CommandersCall.Kernel.Control\\CommandersCall.Kernel.Control.csproj
+		SccProjectName1 = CommandersCall.Kernel.Control
+		SccLocalPath1 = CommandersCall.Kernel.Control
+		SccProjectUniqueName2 = CommandersCall.Kernel.Runner\\CommandersCall.Kernel.Runner.csproj
+		SccProjectName2 = CommandersCall.Kernel.Runner
+		SccLocalPath2 = CommandersCall.Kernel.Runner
+		SccProjectUniqueName3 = CommandersCall.Kernel.Service\\CommandersCall.Kernel.Service.csproj
+		SccProjectName3 = CommandersCall.Kernel.Service
+		SccLocalPath3 = CommandersCall.Kernel.Service
+		SccProjectUniqueName4 = CommandersCall.Kernel\\CommandersCall.Kernel.csproj
+		SccProjectName4 = CommandersCall.Kernel
+		SccLocalPath4 = CommandersCall.Kernel
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B7A277E-0827-40B5-A825-86BCF63AD7F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B7A277E-0827-40B5-A825-86BCF63AD7F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B7A277E-0827-40B5-A825-86BCF63AD7F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B7A277E-0827-40B5-A825-86BCF63AD7F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2364D7AD-BF4E-40CC-ABD0-DAB0E5B7D000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2364D7AD-BF4E-40CC-ABD0-DAB0E5B7D000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2364D7AD-BF4E-40CC-ABD0-DAB0E5B7D000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2364D7AD-BF4E-40CC-ABD0-DAB0E5B7D000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED970B0-E59F-4B0A-AE9F-B21C0E79F202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED970B0-E59F-4B0A-AE9F-B21C0E79F202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED970B0-E59F-4B0A-AE9F-B21C0E79F202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED970B0-E59F-4B0A-AE9F-B21C0E79F202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95B8E4B1-F510-45B3-A5C3-7AA5EBF54D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95B8E4B1-F510-45B3-A5C3-7AA5EBF54D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95B8E4B1-F510-45B3-A5C3-7AA5EBF54D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95B8E4B1-F510-45B3-A5C3-7AA5EBF54D33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
