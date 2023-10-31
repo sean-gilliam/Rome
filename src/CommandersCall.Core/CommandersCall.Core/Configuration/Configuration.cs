@@ -9,7 +9,7 @@
 		static Configuration()
 		{
 			_configuration = new ConfigurationBuilder()
-				.SetBasePath(".")
+				.SetBasePath(Directory.GetCurrentDirectory())
 				.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
 				//.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
 				.AddEnvironmentVariables()
@@ -23,7 +23,7 @@
 				if (_tickerInterval == default(uint))
 				{
 					uint value;
-					if (!uint.TryParse(_configuration.GetValue<string>("Settings.game.tickInterval"), out value))
+					if (!uint.TryParse(_configuration.GetSection("Settings").GetValue<string>("game.tickInterval"), out value))
 						value = 5000;
 
 					_tickerInterval = value;
@@ -42,7 +42,7 @@
 			get
 			{
 				if (string.IsNullOrWhiteSpace(_pipeName))
-					_pipeName = _configuration.GetValue<string>("Settings.config.pipe");
+					_pipeName = _configuration.GetSection("Settings").GetValue<string>("config.pipe");
 
 				return _pipeName;
 			}
@@ -55,7 +55,7 @@
 			get
 			{
 				if (string.IsNullOrWhiteSpace(_server))
-					_server = _configuration.GetValue<string>("Settings.config.server");
+					_server = _configuration.GetSection("Settings").GetValue<string>("config.server");
 
 				return _server;
 			}
