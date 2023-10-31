@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Service", "CommandersCall.Service\CommandersCall.Service.csproj", "{1E96342E-1FB1-4A64-8376-BA48E0D057BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Service.Control", "CommandersCall.Service.Control\CommandersCall.Service.Control.csproj", "{0D7DF722-3FFD-4A0A-B2D9-49763056CB7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E96342E-1FB1-4A64-8376-BA48E0D057BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E96342E-1FB1-4A64-8376-BA48E0D057BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E96342E-1FB1-4A64-8376-BA48E0D057BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E96342E-1FB1-4A64-8376-BA48E0D057BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D7DF722-3FFD-4A0A-B2D9-49763056CB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D7DF722-3FFD-4A0A-B2D9-49763056CB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D7DF722-3FFD-4A0A-B2D9-49763056CB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D7DF722-3FFD-4A0A-B2D9-49763056CB7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
