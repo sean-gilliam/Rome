@@ -1,9 +1,9 @@
-﻿namespace CommandersCall.Core.Players
+﻿namespace CommandersCall.Models.Players
 {
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
-	using CommandersCall.Core.Resources;
+	using CommandersCall.Models.Resources;
 
 	public class Commander
 	{

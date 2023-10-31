@@ -1,7 +1,7 @@
-﻿namespace CommandersCall.Core.Resources
+﻿namespace CommandersCall.Models.Resources
 {
 	using System.Collections.Generic;
-	using CommandersCall.Core.Units;
+	using CommandersCall.Models.Units;
 
 	public class City
 	{

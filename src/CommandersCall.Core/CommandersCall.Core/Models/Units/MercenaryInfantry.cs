@@ -1,4 +1,4 @@
-﻿namespace CommandersCall.Core.Units
+﻿namespace CommandersCall.Models.Units
 {
 	public class MercenaryInfantry : CombatUnit
 	{
