@@ -4,6 +4,7 @@
 	using System.Reactive.Linq;
 	using System.Threading;
 	using System.Threading.Tasks;
+	using CommandersCall.Configuration;
 	using CommandersCall.Kernel.Models;
 
 	public class ClockTask : ITask
