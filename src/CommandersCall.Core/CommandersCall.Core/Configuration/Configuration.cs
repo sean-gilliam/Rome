@@ -1,4 +1,4 @@
-﻿namespace CommandersCall.Kernel
+﻿namespace CommandersCall.Configuration
 {
 	using Microsoft.Extensions.Configuration;
 
@@ -45,6 +45,19 @@
 					_pipeName = _configuration.GetValue<string>("Settings.config.pipe");
 
 				return _pipeName;
+			}
+		}
+
+		private static string? _server;
+
+		public static string Server
+		{
+			get
+			{
+				if (string.IsNullOrWhiteSpace(_server))
+					_server = _configuration.GetValue<string>("Settings.config.server");
+
+				return _server;
 			}
 		}
 	}

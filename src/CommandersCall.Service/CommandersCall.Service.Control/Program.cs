@@ -1,15 +1,15 @@
 ﻿namespace CommandersCall.Kernel.Control
 {
-	using System.Configuration;
 	using System.IO.Pipes;
 	using System.Text;
+	using CommandersCall.Configuration;
 
 	public class Program
 	{
 		public static void Main(string[] args)
 		{
-			var server = ConfigurationManager.AppSettings["config.server"];
-			var pipe = ConfigurationManager.AppSettings["config.pipe"];
+			var server = Configuration.Server;
+			var pipe = Configuration.PipeName;
 
 			using (var s = new NamedPipeClientStream(server, pipe, PipeDirection.InOut))
 			{
