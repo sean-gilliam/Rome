@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandersCall.Service", "CommandersCall.Service", "{CF3A6FAE-3B65-4166-9CC0-BF23DFB527B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Service", "CommandersCall.Service\CommandersCall.Service\CommandersCall.Service.csproj", "{2080A494-877E-4555-9E3A-7EAC8CFB5F8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Service.Control", "CommandersCall.Service\CommandersCall.Service.Control\CommandersCall.Service.Control.csproj", "{2DD95E37-7D2C-4B8A-989F-D31D4D098C2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandersCall.Kernel", "CommandersCall.Kernel", "{628311D8-836B-405A-A663-8963490785C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Kernel", "CommandersCall.Kernel\CommandersCall.Kernel\CommandersCall.Kernel.csproj", "{941F5AEC-77CF-4E80-9BAA-88FD7CED7786}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandersCall.Core", "CommandersCall.Core", "{CA58043C-EA55-4179-B292-DCD6B74E3C5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Core", "CommandersCall.Core\CommandersCall.Core\CommandersCall.Core.csproj", "{83B626B7-AA1E-47D4-BB4E-01857B1B0F9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandersCall.Client", "CommandersCall.Client", "{3E9415D2-8573-48A7-ABEC-CCD6DF3F6A82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Client", "CommandersCall.Client\CommandersCall.Client\CommandersCall.Client.csproj", "{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2080A494-877E-4555-9E3A-7EAC8CFB5F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2080A494-877E-4555-9E3A-7EAC8CFB5F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2080A494-877E-4555-9E3A-7EAC8CFB5F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2080A494-877E-4555-9E3A-7EAC8CFB5F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD95E37-7D2C-4B8A-989F-D31D4D098C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD95E37-7D2C-4B8A-989F-D31D4D098C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD95E37-7D2C-4B8A-989F-D31D4D098C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD95E37-7D2C-4B8A-989F-D31D4D098C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{941F5AEC-77CF-4E80-9BAA-88FD7CED7786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{941F5AEC-77CF-4E80-9BAA-88FD7CED7786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{941F5AEC-77CF-4E80-9BAA-88FD7CED7786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{941F5AEC-77CF-4E80-9BAA-88FD7CED7786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B626B7-AA1E-47D4-BB4E-01857B1B0F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B626B7-AA1E-47D4-BB4E-01857B1B0F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B626B7-AA1E-47D4-BB4E-01857B1B0F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B626B7-AA1E-47D4-BB4E-01857B1B0F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2080A494-877E-4555-9E3A-7EAC8CFB5F8E} = {CF3A6FAE-3B65-4166-9CC0-BF23DFB527B7}
+		{2DD95E37-7D2C-4B8A-989F-D31D4D098C2D} = {CF3A6FAE-3B65-4166-9CC0-BF23DFB527B7}
+		{941F5AEC-77CF-4E80-9BAA-88FD7CED7786} = {628311D8-836B-405A-A663-8963490785C2}
+		{83B626B7-AA1E-47D4-BB4E-01857B1B0F9D} = {CA58043C-EA55-4179-B292-DCD6B74E3C5B}
+		{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9} = {3E9415D2-8573-48A7-ABEC-CCD6DF3F6A82}
+	EndGlobalSection
+EndGlobal
