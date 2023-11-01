@@ -42,3 +42,6 @@ TestResult.xml
 
 # Others
 node_modules/
+
+# log files
+*.log
