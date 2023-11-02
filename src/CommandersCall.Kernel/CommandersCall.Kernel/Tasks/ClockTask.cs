@@ -4,12 +4,23 @@
 	using System.Reactive.Linq;
 	using System.Threading;
 	using System.Threading.Tasks;
-	using CommandersCall.Configuration;
+	using Serilog;
+    using Microsoft.Extensions.Options;
 	using CommandersCall.Kernel.Models;
 
-	public class ClockTask : ITask
+    public class ClockTask : ITask
 	{
-		public readonly static IObservable<long> Tick = Observable.Interval(TimeSpan.FromMilliseconds(Configuration.TickerInterval));
+		private readonly ILogger _logger;
+		private readonly Settings _settings;
+
+		public readonly IObservable<long> Tick;
+
+		public ClockTask(IOptions<Settings> settings, ILogger logger)
+		{
+			_settings = settings.Value;
+			_logger = logger;
+			Tick = Observable.Interval(TimeSpan.FromMilliseconds(_settings.gameTickInterval));
+		}
 
 		public Task Execute(CancellationToken token)
 		{
