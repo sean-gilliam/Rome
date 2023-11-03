@@ -6,12 +6,23 @@
 	using Microsoft.Extensions.Hosting;
 	using Serilog;
 	using Serilog.Events;
+    using Serilog.Filters;
 	using Serilog.Formatting.Json;
 	using Serilog.Sinks.SystemConsole.Themes;
     using CommandersCall.Kernel;
 
-	public class Service
+    public class Service
 	{
+		private readonly string _configDirectory;
+		private readonly string _loggingDirectory;
+
+		public Service()
+		{
+			var cwd = Directory.GetCurrentDirectory();
+			_configDirectory = cwd;
+			_loggingDirectory = Path.Combine(cwd, "logs");
+		}
+
 		public async Task ExecuteAsync(string[] args)
 		{
 			var logger = GetLogger();
@@ -19,7 +30,7 @@
 
 			var host = Host.CreateDefaultBuilder(args)
 				.ConfigureAppConfiguration(config => config
-					.SetBasePath(Directory.GetCurrentDirectory())
+					.SetBasePath(_configDirectory)
 					.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true))
 				.UseSerilog(logger)
 				.ConfigureServices((context, services) => 
@@ -33,6 +44,7 @@
 			string bug = "oops";
 			logger.Debug("Some bug occurred {bug}", bug);
 
+			logger.Information("Commander's Call started. Press Ctrl+C or send SIGTERM to shut down.");
 			await host.RunAsync();
 
 			try
@@ -43,19 +55,32 @@
 
 		private ILogger GetLogger()
 		{
+			var systemMatch = Matching.FromSource("Microsoft");
+
 			return new LoggerConfiguration()
-				.WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Debug, theme: AnsiConsoleTheme.Code)
-				.WriteTo.Logger(config => config.Filter
-					.ByIncludingOnly(evt => evt.Level == LogEventLevel.Debug)
+				.MinimumLevel.Debug()
+				.WriteTo.Logger(console => console.Filter
+						.ByExcluding(systemMatch)
+						.WriteTo.Console(
+							restrictedToMinimumLevel: LogEventLevel.Information,
+							theme: AnsiConsoleTheme.Code))
+				.WriteTo.Logger(bugs => bugs.Filter
+					.ByIncludingOnly(evt => evt.Level == LogEventLevel.Debug && !systemMatch(evt))
 					.WriteTo.File(
 						formatter: new JsonFormatter(),
-						path: "bugs.log"))
-				.WriteTo.File(
-					formatter: new JsonFormatter(),
-					path: "commanders.log",
-					restrictedToMinimumLevel: LogEventLevel.Information, 
-					rollingInterval: RollingInterval.Day)
-				.MinimumLevel.Debug()
+						path: Path.Combine(_loggingDirectory, "bugs.log")))
+				.WriteTo.Logger(trace => trace.Filter
+					.ByIncludingOnly(systemMatch)
+					.WriteTo.File(
+						formatter: new JsonFormatter(),
+						path: Path.Combine(_loggingDirectory, "trace.log")))
+				.WriteTo.Logger(game => game.Filter
+					.ByExcluding(systemMatch)
+					.WriteTo.File(
+						formatter: new JsonFormatter(),
+						path: Path.Combine(_loggingDirectory, "commanders.log"),
+						restrictedToMinimumLevel: LogEventLevel.Information, 
+						rollingInterval: RollingInterval.Day))
 				.CreateLogger();
 		}
 	}
