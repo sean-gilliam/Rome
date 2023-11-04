@@ -1,17 +1,17 @@
 ﻿namespace CommandersCall.Service
 {
-    using System.Threading.Tasks;
-    using Microsoft.Extensions.Configuration;
+	using System.Threading.Tasks;
+	using Microsoft.Extensions.Configuration;
 	using Microsoft.Extensions.DependencyInjection;
 	using Microsoft.Extensions.Hosting;
 	using Serilog;
 	using Serilog.Events;
-    using Serilog.Filters;
+	using Serilog.Filters;
 	using Serilog.Formatting.Json;
 	using Serilog.Sinks.SystemConsole.Themes;
-    using CommandersCall.Kernel;
+	using CommandersCall.Kernel;
 
-    public class Service
+	public class Service
 	{
 		private readonly string _configDirectory;
 		private readonly string _loggingDirectory;
@@ -33,7 +33,7 @@
 					.SetBasePath(_configDirectory)
 					.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true))
 				.UseSerilog(logger)
-				.ConfigureServices((context, services) => 
+				.ConfigureServices((context, services) =>
 				{
 					services.Configure<Settings>(context.Configuration.GetSection("Settings"));
 					services.AddHostedService<KernelService>();
@@ -41,16 +41,14 @@
 				.UseConsoleLifetime()
 				.Build();
 
-			string bug = "oops";
-			logger.Debug("Some bug occurred {bug}", bug);
-
 			logger.Information("Commander's Call started. Press Ctrl+C or send SIGTERM to shut down.");
 			await host.RunAsync();
 
 			try
 			{
 				await host.WaitForShutdownAsync();
-			}catch{}
+			}
+			catch { }
 		}
 
 		private ILogger GetLogger()
@@ -79,7 +77,7 @@
 					.WriteTo.File(
 						formatter: new JsonFormatter(),
 						path: Path.Combine(_loggingDirectory, "commanders.log"),
-						restrictedToMinimumLevel: LogEventLevel.Information, 
+						restrictedToMinimumLevel: LogEventLevel.Information,
 						rollingInterval: RollingInterval.Day))
 				.CreateLogger();
 		}

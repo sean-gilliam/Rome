@@ -1,4 +1,4 @@
-﻿namespace CommandersCall.Kernel.Tasks
+﻿namespace CommandersCall.Kernel.Shared.Schedulers
 {
 	using System;
 	using System.Collections.Concurrent;

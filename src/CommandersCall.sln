@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandersCall.Kernel", "Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Kernel", "CommandersCall.Kernel\CommandersCall.Kernel\CommandersCall.Kernel.csproj", "{941F5AEC-77CF-4E80-9BAA-88FD7CED7786}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Kernel.Shared", "CommandersCall.Kernel\CommandersCall.Kernel.Shared\CommandersCall.Kernel.Shared.csproj", "{28E5FD02-3B21-475A-BE24-4CFF67596F7A}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandersCall.Core", "CommandersCall.Core", "{CA58043C-EA55-4179-B292-DCD6B74E3C5B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandersCall.Core", "CommandersCall.Core\CommandersCall.Core\CommandersCall.Core.csproj", "{83B626B7-AA1E-47D4-BB4E-01857B1B0F9D}"
@@ -50,6 +52,10 @@ Global
 		{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E5FD02-3B21-475A-BE24-4CFF67596F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E5FD02-3B21-475A-BE24-4CFF67596F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E5FD02-3B21-475A-BE24-4CFF67596F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E5FD02-3B21-475A-BE24-4CFF67596F7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2080A494-877E-4555-9E3A-7EAC8CFB5F8E} = {CF3A6FAE-3B65-4166-9CC0-BF23DFB527B7}
@@ -57,5 +63,6 @@ Global
 		{941F5AEC-77CF-4E80-9BAA-88FD7CED7786} = {628311D8-836B-405A-A663-8963490785C2}
 		{83B626B7-AA1E-47D4-BB4E-01857B1B0F9D} = {CA58043C-EA55-4179-B292-DCD6B74E3C5B}
 		{4DA0FEAD-0E6D-45C2-BD13-09446A66E6F9} = {3E9415D2-8573-48A7-ABEC-CCD6DF3F6A82}
+		{28E5FD02-3B21-475A-BE24-4CFF67596F7A} = {628311D8-836B-405A-A663-8963490785C2}
 	EndGlobalSection
 EndGlobal
