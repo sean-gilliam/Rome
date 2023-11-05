@@ -4,7 +4,7 @@
 name: .NET
 
 env:
-  src_dir:  src/
+  src_dir:  ./src
   solution: CommandersCall.sln
 
 on:
@@ -24,9 +24,9 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - name: Change to source directory
-      run: cd ${{ env.src_dir }}
     - name: Restore dependencies
+      working-directory: ${{ env.src_dir }}
       run: dotnet restore ${{ env.solution }}
     - name: Build
+      working-directory: ${{ env.src_dir }}
       run: dotnet build --no-restore ${{ env.solution }}
