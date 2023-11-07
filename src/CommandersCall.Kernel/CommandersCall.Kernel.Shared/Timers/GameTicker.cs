@@ -24,7 +24,7 @@
 
 		public void OnNext(long value)
 		{
-			_logger.Information("Current tick: " + value.ToString(CultureInfo.InvariantCulture));
+			_logger.Information("Game server tick...");
 		}
 	}
 }
