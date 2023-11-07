@@ -32,16 +32,19 @@
 
 		public void Update(int tickInterval)
 		{
+			_logger.Information("Updating game timer from [{_tickInterval}] to [{tickInterval}]...", _tickInterval, tickInterval);
+
 			_tickInterval = Math.Clamp(tickInterval, _minTickValue, _maxTickValue);
 		}
 
 		public void Start()
 		{
+			_logger.Information("Starting game timer...");
+
 			_cancelToken = new CancellationTokenSource();
 
 			_tick = Observable
-			// 	.Interval(TimeSpan.FromMilliseconds(1000))
-				.Generate(0L, i => !_cancelToken.IsCancellationRequested, i => i + 1, i => i, i => TimeSpan.FromMilliseconds(_minTickValue))
+				.Generate(0L, i => !_cancelToken.IsCancellationRequested, i => 0L, i => i, i => TimeSpan.FromMilliseconds(_minTickValue))
 				.Window(() => Observable.Interval(TimeSpan.FromMilliseconds(_tickInterval)))
 				.Select(x => x.LastAsync())
 				.Switch();
@@ -51,6 +54,8 @@
 
 		public void Stop()
 		{
+			_logger.Information("Stopping game timer...");
+
 			_subscriber.Dispose();
 			_cancelToken.Cancel();
 		}

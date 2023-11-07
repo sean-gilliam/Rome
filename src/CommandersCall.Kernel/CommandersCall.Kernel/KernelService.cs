@@ -18,17 +18,20 @@
 
 		protected async override Task ExecuteAsync(CancellationToken cancellingToken)
 		{
-			_logger.Information("Starting game timer...");
 			var timer = new GameTimer(_logger, _settings.gameTickInterval);
 			timer.Start();
 
 			while (!cancellingToken.IsCancellationRequested)
 			{
 				//timer.Update(10000);
-				await Task.Delay(Timeout.InfiniteTimeSpan, cancellingToken);
+				await Task.Delay(Timeout.InfiniteTimeSpan, cancellingToken)
+					.ContinueWith(x =>
+					{
+						// cleanup Isle 7
+						timer.Stop();
+					});
 			}
 
-			timer.Stop();
 			//TODO: develop more once tasks are implmemented
 			// var tasks = AppDomain.CurrentDomain
 			// 	.GetAssemblies()
