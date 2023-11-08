@@ -43,6 +43,15 @@
 
 			_cancelToken = new CancellationTokenSource();
 
+			// Create a continuous list of zeros to be emitted every _minTickValue (in milliseconds). Attach a function to this
+			// list that is called everytime _tickInterval (in milliseconds) is updated. This function creates a continuous list
+			// of longs to be emitted every _tickInterval (in milliseconds). Next we get a handle to the current inner generated
+			// list. Subscribers to the outer list will get notified only when the inner list is updated (either when the inner list
+			// emits a new value or a when a new inner list is created).
+			//
+			// We do this tomfoolery because observables are immutable by default. So everytime the underlying source of the obserable changes
+			// a new observable is created and thus looses all its subscribers. Below is a way to circumvent that behaviour by creating a fascade
+			// over the inner workings.
 			_tick = Observable
 				.Generate(0L, i => !_cancelToken.IsCancellationRequested, i => 0L, i => i, i => TimeSpan.FromMilliseconds(_minTickValue))
 				.Window(() => Observable.Interval(TimeSpan.FromMilliseconds(_tickInterval)))
